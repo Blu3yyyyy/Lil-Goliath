@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://hyjfxd4hqoyh"]
+
+[ext_resource type="Script" uid="uid://bcmuko3ylshvp" path="res://scripts/level_core.gd" id="1_85keo"]
+[ext_resource type="Texture2D" uid="uid://cors0fwsuthyt" path="res://art/Level_Menu_Bg.png" id="2_oag1o"]
+[ext_resource type="FontFile" uid="uid://bpdlw8uv6j7hx" path="res://font/PixelifySans-VariableFont_wght.ttf" id="3_5up2v"]
+[ext_resource type="Texture2D" uid="uid://rigkc7uxpjif" path="res://art/Level_Menu_Box.png" id="4_fh6ga"]
+[ext_resource type="FontFile" uid="uid://bxg5io5pr62le" path="res://font/static/PixelifySans-Regular.ttf" id="5_3mpwc"]
+[ext_resource type="FontFile" uid="uid://dxbgg7t52d213" path="res://font/static/PixelifySans-Medium.ttf" id="6_p53i5"]
+
+[node name="Level Selection" type="Control" unique_id=1937317040]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 277.0
+offset_top = 6.0
+offset_right = -475.0
+offset_bottom = -262.58832
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.696239, 1.696239)
+script = ExtResource("1_85keo")
+
+[node name="LevelMenuBg" type="Sprite2D" parent="." unique_id=1901151661]
+position = Vector2(205.15974, 188.65266)
+scale = Vector2(3.491367, 3.4913673)
+texture = ExtResource("2_oag1o")
+
+[node name="Label" type="Label" parent="." unique_id=312813903]
+layout_mode = 0
+offset_left = 9.432626
+offset_top = 52.46902
+offset_right = 400.60904
+offset_bottom = 95.11607
+theme_override_fonts/font = ExtResource("3_5up2v")
+theme_override_font_sizes/font_size = 23
+text = "Level Selection Menu"
+horizontal_alignment = 1
+
+[node name="level 1" type="Button" parent="." unique_id=1094074079]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 100.22173
+offset_top = 98.45311
+offset_right = 314.1282
+offset_bottom = 145.61626
+theme_override_fonts/font = ExtResource("3_5up2v")
+text = "LEVEL 1"
+icon = ExtResource("4_fh6ga")
+icon_alignment = 1
+expand_icon = true
+
+[node name="level 2" type="Button" parent="." unique_id=532939095]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 99.66103
+offset_top = 141.4895
+offset_right = 313.97205
+offset_bottom = 183.93634
+theme_override_fonts/font = ExtResource("3_5up2v")
+text = "LEVEL 2"
+icon = ExtResource("4_fh6ga")
+icon_alignment = 1
+expand_icon = true
+
+[node name="level 3" type="Button" parent="." unique_id=1665376461]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 100.221725
+offset_top = 180.98865
+offset_right = 314.53284
+offset_bottom = 223.43547
+theme_override_fonts/font = ExtResource("3_5up2v")
+text = "LEVEL 3"
+icon = ExtResource("4_fh6ga")
+icon_alignment = 1
+expand_icon = true
+
+[node name="level 4" type="Button" parent="." unique_id=217120603]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 98.45311
+offset_top = 220.4878
+offset_right = 312.46707
+offset_bottom = 263.52417
+theme_override_fonts/font = ExtResource("5_3mpwc")
+text = "LEVEL 4"
+icon = ExtResource("4_fh6ga")
+icon_alignment = 1
+expand_icon = true
+
+[node name="level 5" type="Button" parent="." unique_id=446906144]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 97.86356
+offset_top = 260.5765
+offset_right = 312.17462
+offset_bottom = 303.02335
+theme_override_fonts/font = ExtResource("6_p53i5")
+text = "LEVEL 5"
+icon = ExtResource("4_fh6ga")
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="level 1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="level 2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="level 3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="level 4" to="." method="_on_level_4_pressed"]
+[connection signal="pressed" from="level 5" to="." method="_on_level_5_pressed"]

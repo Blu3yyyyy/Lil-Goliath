@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://l37ivldffqjl"]
+
+[ext_resource type="Script" uid="uid://wgflrkjhs8wt" path="res://scripts/level_5.gd" id="1_cp4ax"]
+[ext_resource type="Script" uid="uid://cwmnragc2tiyy" path="res://scripts/character_body_2d.gd" id="2_br4so"]
+[ext_resource type="Texture2D" uid="uid://pefvbyfqmld3" path="res://icon.svg" id="3_8ons7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ecxdq"]
+size = Vector2(126, 126)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ecxdq"]
+radius = 96.0
+height = 192.0
+
+[node name="Node2D" type="Node2D" unique_id=2071948808]
+script = ExtResource("1_cp4ax")
+
+[node name="Label" type="Label" parent="." unique_id=1562746699]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 32
+text = "Level 5 "
+uppercase = true
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1127488611]
+script = ExtResource("2_br4so")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=659341939]
+position = Vector2(231, 230)
+texture = ExtResource("3_8ons7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=418048737]
+position = Vector2(232, 229)
+shape = SubResource("RectangleShape2D_ecxdq")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=284504417]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=631619012]
+position = Vector2(1030, 124)
+shape = SubResource("CapsuleShape2D_ecxdq")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
